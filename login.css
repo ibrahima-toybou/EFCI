@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: "Ubuntu", sans-seriferif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bright-azure: #0c4266; 
+    --soft-sand: #f5e6ca;  
+    --crimson-red: #e74c3c;
+}
+.class1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 13% 35% 0 35%;
+    box-shadow: 0 0 5px rgba(7, 7, 7, 0.46);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+
+
+
+}
+/*.body{
+    background-image: url("photo.png");
+
+    height: 100%;
+}*/
+.class1\.1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.img{
+    height: 50px;
+    width: 80px;
+    padding-left: 30%;
+
+
+
+}
+.imput{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #030d7a;
+    margin: 10px;
+    font-family: SansSerif;
+
+}
+.mdp{
+    text-decoration: none;
+}
+.label{
+    font-family: SansSerif;
+    font-weight: 400;
+}
+.send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 10px ;
+}
+.send> button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: #091485;
+    border: none;
+    box-shadow: 0 0 5px rgba(7, 7, 7, 0.46);
+    color: aliceblue;
+
+}

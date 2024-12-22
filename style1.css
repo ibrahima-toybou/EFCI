@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    font-family: "Ubuntu", sans-seriferif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bright-azure: #0c4266; 
+    --soft-sand: #f5e6ca;  
+    --crimson-red: #e74c3c;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    
+}
+/* vertical */
+.vertical{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    background: var(--bright-azure);
+    transition: 0.5s;
+    overflow: hidden;
+    
+}
+.vertical.active{
+    width: 70px;
+}
+
+.vertical div ul li {
+    width: 100%;
+    list-style: none;
+}
+.vertical div ul li:hover,
+.vertical div ul li.hovered{
+    background-color: var(--soft-sand);
+    transition: 0.5s ease-in-out;
+
+}
+.vertical div ul li a {
+    display: flex;
+    justify-content: start;
+    margin-left: 1rem;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--soft-sand);
+}
+.vertical div ul li:hover a,
+.vertical div ul li.hovered a{
+    color: var(--bright-azure);
+}
+.vertical div ul li a .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+}
+.accueil{
+    font-size: 1.6rem;
+}
+.customers{
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+.notification{
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+.settings{
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+/*============================= main==========================*/
+.main{
+    position: relative;
+    width: calc(100% - 270px);
+    left: 270px;
+    height: 100vh;
+    background-image: url("image1.png");
+    background-size: cover;
+    transition: 0.5s;
+
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.tophorizontal{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.menu{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.menu:hover{
+    color: var(--crimson-red);
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*==============================boite à carton=======================*/
+.boite-carton{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.boite-carton.active{
+    width: calc(100% - 80px);
+    left: 80px;
+
+}
+.boite-carton .carton{
+    position: relative;
+    background: var(--bright-azure);
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 0 12px 16px 0 rgba(40, 39, 40, 0.15), 0 17px 50px 0 rgba(0,0,0,0.19);
+    padding: 30px;
+
+}
+.boite-carton .carton .nombre{
+    position: relative;
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--soft-sand);
+}
+.boite-carton .carton .nom-carton{
+    color: var(--soft-sand);
+    font-size: 15px;
+    margin-top: 5px;
+}
+.boite-carton .carton .icon-carton{
+    font-size: 50px;
+    color: var(--soft-sand);
+}
+.boite-carton .carton:hover{
+    background-color: transparent;
+    box-shadow: 0 12px 16px 0 rgba(40, 39, 40, 0.15), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.4s ease-in-out;
+}
+.boite-carton .carton:hover .nombre,
+.boite-carton .carton:hover .nom-carton,
+.boite-carton .carton:hover .icon-carton{
+    color: var(--bright-azure);
+    transition: 0.4s ease-in-out;
+}
+/*================carton bottom======================*/
+.boite-graph{
+    position: relative;
+    width: 100%;
+    top: 60px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    height: 30vh;
+    
+}
+.boite-graph .graph{
+    position: relative;
+    background: transparent;
+    padding: 1px;
+    bottom: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(40, 39, 40, 0.15), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+/*==================================responsive===================================*/
+@media(max-width: 991px){
+    .vertical{
+        left: -300px;
+    }
+    .vertical.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .boite-carton{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .boite-graph{
+        grid-template-columns: repeat(1,1fr) ;
+    }
+}
+@media(max-width: 480px){
+    .boite-carton{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .boite-graph{
+        overflow: auto ;
+    }
+    .user{
+        min-width: 40px;
+    }
+    .vertical{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .vertical.active{
+        width: 100%;
+        left: 0;
+    }
+    .menu{
+        z-index: 1001;
+    }
+    .main.active .menu{
+        color: white;
+        right: 0;
+        left: initial;
+        position: fixed;
+    }
+
+}
